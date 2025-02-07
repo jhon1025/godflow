@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GodFlow: Algoritmo de Discipulado para Iglesias Cristianas</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Estilos personalizados -->
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ====================================================
+       HEADER / NAVBAR (con SVG inline para el logo)
+       ==================================================== -->
+  <header class="bg-white shadow sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <!-- Logo con SVG inline: una cruz sencilla -->
+        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+        </svg>
+        <span class="ml-2 text-2xl font-bold text-gray-800">GodFlow</span>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#inicio" class="text-gray-600 hover:text-gray-900 transition">Inicio</a>
+        <a href="#algoritmo" class="text-gray-600 hover:text-gray-900 transition">Algoritmo</a>
+        <a href="#ventajas" class="text-gray-600 hover:text-gray-900 transition">Ventajas</a>
+        <a href="#aplicaciones" class="text-gray-600 hover:text-gray-900 transition">Aplicaciones</a>
+        <a href="#proceso" class="text-gray-600 hover:text-gray-900 transition">Proceso</a>
+        <a href="#panel-pastor" class="text-gray-600 hover:text-gray-900 transition">Panel Pastor</a>
+        <a href="#contacto" class="text-gray-600 hover:text-gray-900 transition">Contacto</a>
+      </nav>
+      <div class="md:hidden">
+        <button class="text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================================================
+       HERO SECTION
+       ==================================================== -->
+  <section id="inicio" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforma el Discipulado en tu Iglesia</h1>
+      <p class="text-lg md:text-xl mb-8">
+        Con GodFlow, guía a tu congregación hacia un crecimiento espiritual ordenado y relacional.
+      </p>
+      <a href="#algoritmo" class="bg-white text-blue-600 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition transform hover:scale-105">
+        Descubre el Proceso
+      </a>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SECCIÓN: PROBLEMA, SOLUCIÓN Y OFERTA IRRESISTIBLE
+       ==================================================== -->
+  <section id="problema-solucion" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Texto del Problema y Solución -->
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">El Problema</h2>
+          <p class="text-gray-600 mb-4">
+            Muchas iglesias se enfocan únicamente en aumentar números, descuidando la calidad y profundidad de las relaciones. Sin un discipulado relacional, se pierde el verdadero impacto del ministerio.
+          </p>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">La Solución</h2>
+          <p class="text-gray-600 mb-4">
+            GodFlow transforma el discipulado haciendo énfasis en relaciones auténticas y de calidad. Nuestro algoritmo secuencial e iterativo no solo mide el progreso, sino que potencia el crecimiento espiritual de cada miembro, brindando herramientas para mentoría personalizada y un seguimiento detallado.
+          </p>
+          <p class="text-gray-600 font-semibold">
+            ¡Descubre la oferta irresistible y lleva tu iglesia al siguiente nivel!
+          </p>
+          <a href="#contacto" class="mt-6 inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition">
+            Solicita una Demostración Gratuita
+          </a>
+        </div>
+        <!-- Imagen o gráfico ilustrativo en SVG -->
+        <div class="md:w-1/2 flex justify-center">
+          <!-- Ejemplo de SVG ilustrativo (puedes personalizarlo) -->
+          <svg class="w-64 h-64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="256" cy="256" r="256" fill="#EFF6FF"/>
+            <path d="M256 128C202.39 128 160 170.39 160 224C160 277.61 202.39 320 256 320C309.61 320 352 277.61 352 224C352 170.39 309.61 128 256 128ZM256 288C218.75 288 192 261.25 192 224C192 186.75 218.75 160 256 160C293.25 160 320 186.75 320 224C320 261.25 293.25 288 256 288Z" fill="#2563EB"/>
+            <path d="M256 352C205.07 352 160 397.07 160 448V480H352V448C352 397.07 306.93 352 256 352ZM192 464V448C192 407.74 224.74 376 256 376C287.26 376 320 407.74 320 448V464H192Z" fill="#2563EB"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       ALGORITMO GODFLOW Y DIAGRAMA RESPONSIVO
+       ==================================================== -->
+  <section id="algoritmo" class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">El Algoritmo GodFlow</h2>
+      <p class="text-gray-600 text-center mb-12">
+        Se compone de 6 pasos: Identificar, Construir Relaciones, Enseñar, Modelar, Crear Comunidad y Replicar.
+      </p>
+      <!-- Diagrama horizontal para pantallas medianas/altas -->
+      <div class="hidden md:block">
+        <svg viewBox="0 0 800 150" class="w-full h-auto">
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L0,10 L10,5 z" fill="#2563EB" />
+            </marker>
+          </defs>
+          <!-- Seis círculos -->
+          <circle cx="100" cy="75" r="30" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+          <text x="100" y="85" text-anchor="middle" fill="#1E3A8A" font-size="16" font-weight="bold">1</text>
+          <text x="100" y="115" text-anchor="middle" fill="#1E3A8A" font-size="12">Identificar</text>
+
+          <circle cx="220" cy="75" r="30" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+          <text x="220" y="85" text-anchor="middle" fill="#1E3A8A" font-size="16" font-weight="bold">2</text>
+          <text x="220" y="115" text-anchor="middle" fill="#1E3A8A" font-size="12">Construir</text>
+
+          <circle cx="340" cy="75" r="30" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+          <text x="340" y="85" text-anchor="middle" fill="#1E3A8A" font-size="16" font-weight="bold">3</text>
+          <text x="340" y="115" text-anchor="middle" fill="#1E3A8A" font-size="12">Enseñar</text>
+
+          <circle cx="460" cy="75" r="30" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+          <text x="460" y="85" text-anchor="middle" fill="#1E3A8A" font-size="16" font-weight="bold">4</text>
+          <text x="460" y="115" text-anchor="middle" fill="#1E3A8A" font-size="12">Modelar</text>
+
+          <circle cx="580" cy="75" r="30" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+          <text x="580" y="85" text-anchor="middle" fill="#1E3A8A" font-size="16" font-weight="bold">5</text>
+          <text x="580" y="115" text-anchor="middle" fill="#1E3A8A" font-size="12">Crear</text>
+
+          <circle cx="700" cy="75" r="30" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+          <text x="700" y="85" text-anchor="middle" fill="#1E3A8A" font-size="16" font-weight="bold">6</text>
+          <text x="700" y="115" text-anchor="middle" fill="#1E3A8A" font-size="12">Replicar</text>
+
+          <!-- Conectores con flechas -->
+          <line x1="130" y1="75" x2="190" y2="75" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow)" />
+          <line x1="250" y1="75" x2="310" y2="75" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow)" />
+          <line x1="370" y1="75" x2="430" y2="75" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow)" />
+          <line x1="490" y1="75" x2="550" y2="75" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow)" />
+          <line x1="610" y1="75" x2="670" y2="75" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow)" />
+        </svg>
+      </div>
+
+      <!-- Diagrama vertical para dispositivos pequeños -->
+      <div class="block md:hidden">
+        <ul class="relative border-l border-blue-200 ml-6">
+          <li class="mb-10">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+                1
+              </div>
+              <div class="ml-4">
+                <h4 class="text-sm font-semibold text-gray-800">Identificar</h4>
+                <p class="text-xs text-gray-600">Encuentra a quienes buscan conexión espiritual.</p>
+              </div>
+            </div>
+          </li>
+          <li class="mb-10">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+                2
+              </div>
+              <div class="ml-4">
+                <h4 class="text-sm font-semibold text-gray-800">Construir</h4>
+                <p class="text-xs text-gray-600">Genera relaciones de confianza.</p>
+              </div>
+            </div>
+          </li>
+          <li class="mb-10">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+                3
+              </div>
+              <div class="ml-4">
+                <h4 class="text-sm font-semibold text-gray-800">Enseñar</h4>
+                <p class="text-xs text-gray-600">Explica los principios bíblicos.</p>
+              </div>
+            </div>
+          </li>
+          <li class="mb-10">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+                4
+              </div>
+              <div class="ml-4">
+                <h4 class="text-sm font-semibold text-gray-800">Modelar</h4>
+                <p class="text-xs text-gray-600">Sé un ejemplo vivo.</p>
+              </div>
+            </div>
+          </li>
+          <li class="mb-10">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+                5
+              </div>
+              <div class="ml-4">
+                <h4 class="text-sm font-semibold text-gray-800">Crear</h4>
+                <p class="text-xs text-gray-600">Forma comunidades de fe.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+                6
+              </div>
+              <div class="ml-4">
+                <h4 class="text-sm font-semibold text-gray-800">Replicar</h4>
+                <p class="text-xs text-gray-600">Multiplica el discipulado.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       VENTAJAS DEL MODELO
+       ==================================================== -->
+  <section id="ventajas" class="py-16 bg-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Ventajas del Modelo</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="flex items-start">
+          <!-- Ícono SVG -->
+          <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4" />
+          </svg>
+          <div class="ml-4">
+            <h3 class="text-xl font-semibold text-gray-800">Claridad</h3>
+            <p class="text-gray-600">Pasos claros y secuenciales.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01" />
+          </svg>
+          <div class="ml-4">
+            <h3 class="text-xl font-semibold text-gray-800">Escalabilidad</h3>
+            <p class="text-gray-600">El proceso se multiplica fácilmente.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1" />
+          </svg>
+          <div class="ml-4">
+            <h3 class="text-xl font-semibold text-gray-800">Flexibilidad</h3>
+            <p class="text-gray-600">Se adapta a las necesidades de la congregación.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3" />
+          </svg>
+          <div class="ml-4">
+            <h3 class="text-xl font-semibold text-gray-800">Medición</h3>
+            <p class="text-gray-600">Monitorea el progreso en cada ciclo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       APLICACIONES DEL MODELO
+       ==================================================== -->
+  <section id="aplicaciones" class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Aplicaciones del Modelo</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow transition transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-gray-800">Liderazgo Comunitario</h3>
+          <p class="text-gray-600 mt-4">
+            Guía a grupos y fomenta un ambiente de crecimiento espiritual.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow transition transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-gray-800">Tecnología</h3>
+          <p class="text-gray-600 mt-4">
+            Interfaz intuitiva que facilita el seguimiento y la replicación del proceso.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow transition transform hover:scale-105">
+          <h3 class="text-xl font-semibold text-gray-800">Educación y Talleres</h3>
+          <p class="text-gray-600 mt-4">
+            Diseña módulos y sesiones para el aprendizaje del discipulado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SEGUIMIENTO DEL PROCESO (Tarjetas de Disípulos)
+       ==================================================== -->
+  <section id="proceso" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Seguimiento del Proceso en tu Iglesia</h2>
+      <p class="text-gray-600 text-center mb-12">
+        Conoce cómo los miembros avanzan en cada etapa y reciben sugerencias para crecer.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Tarjeta: Juan Pérez - Etapa Identificar -->
+        <div class="bg-white p-6 rounded-lg shadow transition transform hover:scale-105">
+          <div class="flex items-center mb-4">
+            <!-- SVG avatar de ejemplo -->
+            <svg class="h-10 w-10 rounded-full text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <div class="ml-3">
+              <h3 class="text-lg font-semibold text-gray-800">Juan Pérez</h3>
+              <p class="text-sm text-gray-500">Actual: Identificar</p>
+            </div>
+          </div>
+          <!-- Timeline Compacto -->
+          <div class="flex items-center mb-4">
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">1</div>
+              <span class="mt-1 text-[10px] text-center">Identificar</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">2</div>
+              <span class="mt-1 text-[10px] text-center">Construir</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">3</div>
+              <span class="mt-1 text-[10px] text-center">Enseñar</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">4</div>
+              <span class="mt-1 text-[10px] text-center">Modelar</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">5</div>
+              <span class="mt-1 text-[10px] text-center">Crear</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">6</div>
+              <span class="mt-1 text-[10px] text-center">Replicar</span>
+            </div>
+          </div>
+          <!-- Sugerencias -->
+          <div class="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-200">
+            <h4 class="text-sm font-semibold text-blue-800 mb-2">Sugerencias para Identificar</h4>
+            <ul class="list-disc list-inside text-sm text-blue-700">
+              <li>Observa señales de búsqueda espiritual.</li>
+              <li>Conversa sobre inquietudes existenciales.</li>
+              <li>Comparte testimonios inspiradores.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta: María López - Etapa Construir Relaciones -->
+        <div class="bg-white p-6 rounded-lg shadow transition transform hover:scale-105">
+          <div class="flex items-center mb-4">
+            <svg class="h-10 w-10 rounded-full text-green-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <div class="ml-3">
+              <h3 class="text-lg font-semibold text-gray-800">María López</h3>
+              <p class="text-sm text-gray-500">Actual: Construir Relaciones</p>
+            </div>
+          </div>
+          <!-- Timeline Compacto -->
+          <div class="flex items-center mb-4">
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="mt-1 text-[10px] text-center">Identificar</span>
+            </div>
+            <div class="flex-1 h-1 bg-green-500 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">2</div>
+              <span class="mt-1 text-[10px] text-center">Construir</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">3</div>
+              <span class="mt-1 text-[10px] text-center">Enseñar</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">4</div>
+              <span class="mt-1 text-[10px] text-center">Modelar</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">5</div>
+              <span class="mt-1 text-[10px] text-center">Crear</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">6</div>
+              <span class="mt-1 text-[10px] text-center">Replicar</span>
+            </div>
+          </div>
+          <!-- Sugerencias -->
+          <div class="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-200">
+            <h4 class="text-sm font-semibold text-blue-800 mb-2">Sugerencias para Construir Relaciones</h4>
+            <ul class="list-disc list-inside text-sm text-blue-700">
+              <li>Inicia conversaciones genuinas y escucha activamente.</li>
+              <li>Organiza encuentros informales para conocer mejor a la persona.</li>
+              <li>Comparte experiencias y testimonios de fe.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta: Pedro Gomez - Etapa Enseñar -->
+        <div class="bg-white p-6 rounded-lg shadow transition transform hover:scale-105">
+          <div class="flex items-center mb-4">
+            <svg class="h-10 w-10 rounded-full text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <div class="ml-3">
+              <h3 class="text-lg font-semibold text-gray-800">Pedro Gomez</h3>
+              <p class="text-sm text-gray-500">Actual: Enseñar</p>
+            </div>
+          </div>
+          <!-- Timeline Compacto -->
+          <div class="flex items-center mb-4">
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="mt-1 text-[10px] text-center">Identificar</span>
+            </div>
+            <div class="flex-1 h-1 bg-green-500 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="mt-1 text-[10px] text-center">Construir</span>
+            </div>
+            <div class="flex-1 h-1 bg-green-500 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">3</div>
+              <span class="mt-1 text-[10px] text-center">Enseñar</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">4</div>
+              <span class="mt-1 text-[10px] text-center">Modelar</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">5</div>
+              <span class="mt-1 text-[10px] text-center">Crear</span>
+            </div>
+            <div class="flex-1 h-1 bg-gray-300 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center text-xs font-bold">6</div>
+              <span class="mt-1 text-[10px] text-center">Replicar</span>
+            </div>
+          </div>
+          <!-- Sugerencias -->
+          <div class="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-200">
+            <h4 class="text-sm font-semibold text-blue-800 mb-2">Sugerencias para Enseñar</h4>
+            <ul class="list-disc list-inside text-sm text-blue-700">
+              <li>Comparte testimonios inspiradores y ejemplos prácticos.</li>
+              <li>Utiliza recursos visuales y audiovisuales.</li>
+              <li>Explica de forma clara el mensaje de la fe.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta: Sofía Méndez - Etapa Replicar -->
+        <div class="bg-white p-6 rounded-lg shadow transition transform hover:scale-105">
+          <div class="flex items-center mb-4">
+            <svg class="h-10 w-10 rounded-full text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <div class="ml-3">
+              <h3 class="text-lg font-semibold text-gray-800">Sofía Méndez</h3>
+              <p class="text-sm text-gray-500">Actual: Replicar</p>
+            </div>
+          </div>
+          <!-- Timeline Compacto -->
+          <div class="flex items-center mb-4">
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="mt-1 text-[10px] text-center">Identificar</span>
+            </div>
+            <div class="flex-1 h-1 bg-green-500 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="mt-1 text-[10px] text-center">Construir</span>
+            </div>
+            <div class="flex-1 h-1 bg-green-500 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="mt-1 text-[10px] text-center">Enseñar</span>
+            </div>
+            <div class="flex-1 h-1 bg-green-500 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="mt-1 text-[10px] text-center">Modelar</span>
+            </div>
+            <div class="flex-1 h-1 bg-green-500 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span class="mt-1 text-[10px] text-center">Crear</span>
+            </div>
+            <div class="flex-1 h-1 bg-green-500 mx-1"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">6</div>
+              <span class="mt-1 text-[10px] text-center">Replicar</span>
+            </div>
+          </div>
+          <!-- Sugerencias para Replicar -->
+          <div class="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-200">
+            <h4 class="text-sm font-semibold text-blue-800 mb-2">Sugerencias para Replicar</h4>
+            <ul class="list-disc list-inside text-sm text-blue-700">
+              <li>Anima a compartir testimonios y experiencias.</li>
+              <li>Ofrece herramientas para el discipulado.</li>
+              <li>Establece un plan de mentoría y seguimiento.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       DASHBOARD DE SEGUIMIENTO DE DISÍPULOS
+       ==================================================== -->
+  <section id="dashboard" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Dashboard de Seguimiento de Disípulos</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white rounded-lg shadow">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="py-3 px-4 text-left text-gray-600">Nombre</th>
+              <th class="py-3 px-4 text-left text-gray-600">Etapa</th>
+              <th class="py-3 px-4 text-left text-gray-600">Progreso</th>
+              <th class="py-3 px-4 text-left text-gray-600">Última Actividad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="py-3 px-4 flex items-center space-x-2">
+                <svg class="h-8 w-8 rounded-full text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span>Juan Pérez</span>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Identificar</td>
+              <td class="py-3 px-4">
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-500 h-2 rounded-full" style="width: 20%"></div>
+                </div>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Hace 10 minutos</td>
+            </tr>
+            <tr class="border-t">
+              <td class="py-3 px-4 flex items-center space-x-2">
+                <svg class="h-8 w-8 rounded-full text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span>María López</span>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Construir</td>
+              <td class="py-3 px-4">
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-500 h-2 rounded-full" style="width: 50%"></div>
+                </div>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Hace 1 hora</td>
+            </tr>
+            <tr class="border-t">
+              <td class="py-3 px-4 flex items-center space-x-2">
+                <svg class="h-8 w-8 rounded-full text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span>Pedro Gomez</span>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Enseñar</td>
+              <td class="py-3 px-4">
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Hace 30 minutos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       PANEL DEL PASTOR: VINCULAR MENTORES
+       ==================================================== -->
+  <section id="panel-pastor" class="py-16 bg-gray-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Panel del Pastor</h2>
+      <p class="text-gray-600 text-center mb-8">
+        Controla y vincula mentores para cada discípulo, asegurando una guía personalizada.
+      </p>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white rounded-lg shadow">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="py-3 px-4 text-left text-gray-600">Disípulo</th>
+              <th class="py-3 px-4 text-left text-gray-600">Etapa</th>
+              <th class="py-3 px-4 text-left text-gray-600">Mentor Asignado</th>
+              <th class="py-3 px-4 text-left text-gray-600">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="py-3 px-4 flex items-center space-x-2">
+                <svg class="h-8 w-8 rounded-full text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span>Juan Pérez</span>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Identificar</td>
+              <td class="py-3 px-4 text-gray-700">—</td>
+              <td class="py-3 px-4">
+                <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition text-sm">
+                  Vincular Mentor
+                </button>
+              </td>
+            </tr>
+            <tr class="border-t">
+              <td class="py-3 px-4 flex items-center space-x-2">
+                <svg class="h-8 w-8 rounded-full text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span>María López</span>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Construir</td>
+              <td class="py-3 px-4 text-gray-700">Pastor Juan</td>
+              <td class="py-3 px-4">
+                <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition text-sm">
+                  Vincular Mentor
+                </button>
+              </td>
+            </tr>
+            <tr class="border-t">
+              <td class="py-3 px-4 flex items-center space-x-2">
+                <svg class="h-8 w-8 rounded-full text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span>Pedro Gomez</span>
+              </td>
+              <td class="py-3 px-4 text-gray-700">Enseñar</td>
+              <td class="py-3 px-4 text-gray-700">Pastora Ana</td>
+              <td class="py-3 px-4">
+                <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition text-sm">
+                  Vincular Mentor
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       CALL TO ACTION
+       ==================================================== -->
+  <section id="contacto" class="py-16 bg-indigo-600 text-white">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">¿Listo para transformar tu iglesia?</h2>
+      <p class="text-lg mb-8">
+        Descubre cómo GodFlow puede guiar a tu congregación hacia un crecimiento espiritual y una comunidad vibrante.
+      </p>
+      <a href="#" class="bg-white text-indigo-600 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition transform hover:scale-105">
+        Contáctanos
+      </a>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       FOOTER
+       ==================================================== -->
+  <footer class="bg-gray-800 text-gray-300 py-6">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <p>&copy; 2025 GodFlow. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
